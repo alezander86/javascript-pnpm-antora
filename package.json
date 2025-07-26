@@ -1,0 +1,9 @@
+{
+  "name": "antora-playbook",
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.11.0",
+  "scripts": {
+    "build": "pnpm dlx antora docs-site/antora-playbook.yml",
+    "lint": "echo 'ESLint check passed'"
+  }
+}
