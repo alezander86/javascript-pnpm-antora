@@ -1,0 +1,1 @@
+1. Application javascript-pnpm-antora has been successfully deployed!!

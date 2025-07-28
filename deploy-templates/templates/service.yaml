@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "javascript-pnpm-antora.fullname" . }}
+  labels:
+    {{- include "javascript-pnpm-antora.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "javascript-pnpm-antora.selectorLabels" . | nindent 4 }}
